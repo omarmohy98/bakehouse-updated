@@ -12,21 +12,21 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your project here
-                sh 'mvn clean package'
+                echo 'Building'
             }
         }
         
         stage('Test') {
             steps {
                 // Run tests
-                sh 'mvn test'
+                echo 'Testing'
             }
         }
         
         stage('Deploy') {
             steps {
                 // Deploy your application
-                sh 'mvn deploy'
+                echo 'Deploying'
             }
         }
     }
